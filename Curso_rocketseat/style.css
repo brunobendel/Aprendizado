@@ -1,0 +1,19 @@
+body{
+    background: url(./assets/bg-mobile.jpg) no-repeat top center/cover;
+}
+
+#container{
+    border: 1px solid red;
+    width: 360px;
+    height: 712px;
+    margin-right: auto;
+    margin: auto;
+}
+
+#profile{
+    text-align: center;
+}
+
+#profile img{
+    width: 112px;
+}
