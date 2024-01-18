@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="/testado_charjs copy/style.css" />
+  </head>
+  <body>
+    <div id="container">
+      <canvas id="myChart"></canvas>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <script>
+
+      // Função para configurar os dados do gráfico
+      function getChartData() {
+        return {
+          labels: ["Red", "Blue", "Yellow", "Green", "Purple", "Orange"],
+          datasets: [
+            {
+              label: "# of Votes",
+              data: [12, 19, 3, 5, 2, 3],
+              borderWidth: 1,
+            },
+            {
+              label: 'Goal',
+              data: [10, 10, 10, 10, 10, 10], // Seus valores de objetivo aqui
+              type: 'line',
+              borderColor: 'red',
+              borderWidth: 2,
+              borderDash: [5, 5], // Adiciona uma linha tracejada
+              fill: false,
+            },
+          ],
+        };
+      }
+
+      // Função para configurar as opções do gráfico
+      function getChartOptions() {
+        return {
+          scales: {
+            y: {
+              beginAtZero: true,
+            },
+          },
+          responsive: true,
+          plugins: {
+            legend: {
+              display: false,
+              position: 'bottom',
+            }
+          }
+        };
+      }
+
+      // Criar o contexto do gráfico
+      const ctx = document.getElementById("myChart");
+
+      // Configuração padrão do gráfico
+      const chartConfig = {
+        type: "bar",
+        data: getChartData(),
+        options: getChartOptions(),
+      };
+
+      // Criar o gráfico com as configurações
+      new Chart(ctx, chartConfig);
+    </script>
+  </body>
+</html>

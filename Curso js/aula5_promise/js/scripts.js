@@ -11,11 +11,11 @@ function loadsomedata() {
 
 loadsomedata()
     .then(function (data) {
-        console.log(`DADOS CARREGADOS COM SUCESSO`, data);
+        console.log(`DADOS CARREGADOS COM SUCESSO `, data);
         return data.name.toLowerCase(); // Acesse a propriedade 'name' do objeto 'data'
     })
     .then(function (newdata) {
-        console.log(`DADOS CARREGADOS COM SUCESSO`, newdata);
+        console.log(`DADOS CARREGADOS COM SUCESSO newdata`, document.getElementsByTagName());
         return newdata; // Retorna 'newdata'
     })
     .catch(function (error) {
