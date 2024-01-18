@@ -1,0 +1,18 @@
+body {
+    background: whitesmoke;
+}
+
+#container {
+    width: 500px;
+    position: relative;
+    margin: auto;
+    height: 400px;
+    padding-top: 100px;
+    margin-right: auto;
+}
+
+canvas{
+    border: 1px solid white;
+    background: white;
+    box-shadow: 3px 3px 10px black;
+}
